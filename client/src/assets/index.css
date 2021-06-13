@@ -1,0 +1,190 @@
+body {
+  color: rgb(44, 44, 44) !important;
+}
+.cursor {
+  cursor: pointer;
+}
+
+.main-image {
+  display: none;
+}
+.form.col-6 {
+  max-width: 100%;
+  margin-top: 13vh !important;
+  flex: 0 0 100%;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 593px) {
+  .main-image {
+    display: block;
+    background-image: url("./main.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+    height: 95vh;
+  }
+  .form.col-6 {
+    max-width: 50%;
+    flex: 0 0 50%;
+    margin-top: 24vh !important;
+  }
+}
+
+.log-info {
+  padding-left: 5px;
+}
+
+.card.post {
+  height: 350px;
+}
+
+.card-img-top {
+  object-fit: cover;
+  max-width: 100%;
+  height: 100%;
+}
+
+.card-body {
+  border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.profile-logo {
+  width: 150px;
+  height: 150px;
+  margin: 20px auto;
+}
+
+.profile-logo .profile-img {
+  max-width: 100%;
+  height: 150px;
+  border-radius: 50px;
+  object-fit: cover;
+}
+[hidden] {
+  display: none !important;
+}
+
+.addPost-btn {
+  width: 100%;
+}
+
+.img-modal {
+  width: 300px !important;
+  height: 300px !important;
+}
+.follow-user-img {
+  width: 40px;
+  border-radius: 100px;
+  height: 40px;
+}
+
+.btn-follow-unfollow {
+  width: 60px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (min-width: 1000px) {
+  .btn-follow-unfollow {
+    width: 120px;
+    height: 45px;
+  }
+}
+
+.list-group-item a {
+  text-decoration: none;
+}
+.list-group-item:hover .mayknow-username {
+  color: #1f9bcf;
+}
+
+header {
+  position: relative;
+}
+.search-users-block {
+  position: absolute;
+  top: 146px;
+}
+.not-foundUser-text {
+  font-size: 8px;
+}
+
+@media screen and (min-width: 993px) {
+  .search-users-block {
+    top: 84px;
+  }
+  .not-foundUser-text {
+    font-size: 12px;
+  }
+}
+
+.user-username {
+  font-size: 13px;
+}
+@media screen and (min-width: 993px) {
+  .user-username {
+    font-size: 25px;
+  }
+}
+
+.my-acc-text {
+  margin-bottom: 1rem;
+  display: block;
+}
+.ppl-may-know-text {
+  margin-top: 3rem;
+  display: block;
+}
+.loading-text {
+  text-align: center;
+}
+@media screen and (min-width: 993px) {
+  .my-acc-text {
+    margin-bottom: 0rem;
+  }
+
+  .ppl-may-know-text {
+    margin-top: 0;
+  }
+  .loading-text {
+    text-align: left;
+  }
+}
+
+.follow-info {
+  font-size: 10px;
+}
+
+@media screen and (min-width: 1000px) {
+  .follow-info {
+    font-size: auto;
+  }
+}
+
+.btn-follow,
+.btn-unfollow {
+  margin-top: 1rem;
+}
+
+.user-info-block-follow {
+  justify-content: space-around !important;
+}
+
+@media screen and (min-width: 1000px) {
+  .user-info-block-follow {
+    justify-content: center !important;
+  }
+}
+
+.loader {
+  display: none;
+}
+
+@media screen and (min-width: 1000px) {
+  .loader {
+    display: block;
+  }
+}
