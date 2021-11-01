@@ -170,8 +170,9 @@ exports.usersToFollow = async function (req, res) {
     const users = await User.find({
       _id: { $nin: [userId, ...userFollowings] },
     })
-      .sort({ followersCount: -1 })
-      .limit(5);
+      .limit(5)
+      .select("-password")
+      .sort({ followersCount: -1 });
 
     res.send(users);
   } catch (err) {
