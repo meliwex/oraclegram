@@ -24,7 +24,7 @@ const Post = ({
         setModalImgWhoLiked(whoLiked);
         openModalImg();
       }}
-      className="col-lg-4 col-md-6 p-0 card-modal mb-4"
+      className="col-lg-4 col-md-6  card-modal mb-4"
     >
       <div className="card post cursor">
         <img
