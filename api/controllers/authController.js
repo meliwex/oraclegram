@@ -62,16 +62,22 @@ exports.signup = async function (req, res) {
 
 exports.login = async function (req, res) {
   try {
-    if (!IsValidate(req))
+    if (!IsValidate(req)) {
       return res.status(400).send({ errors: getErrors(req) });
+    }
 
     const loginInput = req.body.username;
     const passwordInput = req.body.password;
 
     const user = await User.findOne({ username: loginInput });
-    const result = await bcrypt.compare(passwordInput, user.password);
-    const token = jwt.generateToken(user._id);
 
+    const result = await bcrypt.compare(passwordInput, user.password);
+
+    if (result === false) {
+      throw "";
+    }
+
+    const token = jwt.generateToken(user._id);
     res.send({ token });
   } catch (err) {
     res.status(400).send({ message: "Incorrect password or username" });
