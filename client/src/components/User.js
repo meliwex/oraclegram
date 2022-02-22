@@ -168,6 +168,7 @@ const User = ({
       })
       .then((res) => {
         setModalImgIsOpen(false);
+        setLoading(true);
       })
       .catch((err) => {
         const status = err.response && err.response.status;
@@ -264,16 +265,19 @@ const User = ({
         />
         <div className="container">
           <div className="row mt-4">
-            {loading && loadingPosts.map((it) => <Loader key={it} />)}
-            <UserPosts
-              posts={posts}
-              setModalImgImage={setModalImgImage}
-              setModalImgText={setModalImgText}
-              setModalImgId={setModalImgId}
-              setModalImgLikesCount={setModalImgLikesCount}
-              openModalImg={openModalImg}
-              setModalImgWhoLiked={setModalImgWhoLiked}
-            />
+            {loading ? (
+              loadingPosts.map((it) => <Loader key={it} />)
+            ) : (
+              <UserPosts
+                posts={posts}
+                setModalImgImage={setModalImgImage}
+                setModalImgText={setModalImgText}
+                setModalImgId={setModalImgId}
+                setModalImgLikesCount={setModalImgLikesCount}
+                openModalImg={openModalImg}
+                setModalImgWhoLiked={setModalImgWhoLiked}
+              />
+            )}
           </div>
         </div>
       </div>
@@ -343,16 +347,19 @@ const User = ({
         />
         <div className="container">
           <div className="row">
-            {loading && loadingPosts.map((it) => <Loader key={it} />)}
-            <UserPosts
-              posts={posts}
-              setModalImgImage={setModalImgImage}
-              setModalImgText={setModalImgText}
-              setModalImgId={setModalImgId}
-              setModalImgLikesCount={setModalImgLikesCount}
-              openModalImg={openModalImg}
-              setModalImgWhoLiked={setModalImgWhoLiked}
-            />
+            {loading ? (
+              loadingPosts.map((it) => <Loader key={it} />)
+            ) : (
+              <UserPosts
+                posts={posts}
+                setModalImgImage={setModalImgImage}
+                setModalImgText={setModalImgText}
+                setModalImgId={setModalImgId}
+                setModalImgLikesCount={setModalImgLikesCount}
+                openModalImg={openModalImg}
+                setModalImgWhoLiked={setModalImgWhoLiked}
+              />
+            )}
           </div>
         </div>
       </div>
