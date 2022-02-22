@@ -153,6 +153,7 @@ const User = ({
         })
         .then((res) => {
           closeModalPost();
+          setSelectedImage(null);
         })
         .catch((err) => {
           const status = err.response && err.response.status;
