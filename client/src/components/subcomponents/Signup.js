@@ -50,39 +50,42 @@ const Signup = ({ setLogedIn }) => {
           </div>
         )}
         <div className="mb-3">
-          <label htmlFor="exampleInputEmail1" className="form-label">
+          <label htmlFor="fullName" className="form-label">
             Full Name
           </label>
           <input
             value={fullname}
             onChange={(e) => setFullname(e.target.value)}
             type="text"
+            id="fullName"
             className="form-control"
             aria-describedby="TextHelp"
             required
           />
         </div>
         <div className="mb-3">
-          <label htmlFor="exampleInputEmail1" className="form-label">
+          <label htmlFor="username" className="form-label">
             Username
           </label>
           <input
             value={username}
             onChange={(e) => setUsername(e.target.value)}
             type="text"
+            id="username"
             className="form-control"
             aria-describedby="TextHelp"
             required
           />
         </div>
         <div className="mb-3">
-          <label htmlFor="exampleInputPassword1" className="form-label">
+          <label htmlFor="password" className="form-label">
             Password
           </label>
           <input
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             type="password"
+            id="password"
             className="form-control"
             required
           />
