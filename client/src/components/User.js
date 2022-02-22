@@ -92,7 +92,6 @@ const User = ({
   }, [isFollowOrUnFollow]);
 
   useEffect(() => {
-    if (isDeletePost) setLoading(true);
     axios
       .get(`/v1/posts/${username}`, {
         headers: getAuthHeader(),

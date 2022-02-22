@@ -30,7 +30,7 @@ const Post = ({
         <img
           className="card-img-top "
           src={`data:image/png;base64, ${image}`}
-          alt="Card image cap"
+          alt="Card cap"
         />
       </div>
     </div>
